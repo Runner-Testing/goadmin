@@ -1,0 +1,39 @@
+# Binari hasil `go build` (mis. ./checkconventions, ./server) — jangan di-commit.
+/checkconventions
+/server
+/goadmin
+*.exe
+*.test
+*.out
+
+# Coverage & profil
+coverage.txt
+coverage.html
+*.prof
+
+# Environment & secret (jangan pernah di-commit)
+.env
+.env.local
+*.local
+
+# Database SQLite lokal (dev/test)
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache/unduhan runtime (mis. katalog template) + upload — bukan sumber.
+# Isi folder upload di-ignore, tapi folder-nya dipertahankan via .gitkeep
+# (driver=local menulis ke sini; jangan commit berkas yang diunggah user).
+/web/cache/
+/web/uploads/*
+!/web/uploads/.gitkeep
+/tmp/
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Compiled binary
+/goAdmin
